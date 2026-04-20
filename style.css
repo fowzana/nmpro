@@ -1,0 +1,167 @@
+:root {
+    --primary: #0095f6;
+    --bg: #ffffff;
+    --light-bg: #fafafa;
+    --border: #dbdbdb;
+    --text: #262626;
+    --secondary: #8e8e8e;
+    --insta-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.hidden { display: none !important; }
+
+/* --- LOGIN --- */
+#login-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--insta-gradient);
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.brand-logo {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: #fafafa;
+}
+
+.btn-primary {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- MAIN INTERFACE --- */
+.main-header {
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.logo { font-size: 24px; font-weight: bold; font-style: italic; }
+.header-icons i { font-size: 22px; margin-left: 20px; }
+
+.page-content {
+    display: none;
+    max-width: 600px;
+    margin: 60px auto 70px auto;
+}
+
+.active-page { display: block; }
+
+/* --- STORIES --- */
+.stories-bar {
+    display: flex;
+    overflow-x: auto;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    font-size: 11px;
+}
+
+.story-ring {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #ccc;
+}
+
+.story-ring.active { background: var(--insta-gradient); }
+
+.story-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+/* --- POSTS --- */
+.post-card {
+    background: white;
+    border: 1px solid var(--border);
+    margin-top: 15px;
+}
+
+.post-header { padding: 12px; display: flex; align-items: center; font-weight: 600; }
+.post-img { width: 100%; display: block; }
+.post-footer { padding: 12px; }
+.post-actions { font-size: 24px; margin-bottom: 10px; display: flex; gap: 15px; }
+
+/* --- NAV BAR --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.nav-icon { font-size: 24px; cursor: pointer; color: var(--secondary); }
+.nav-icon.active { color: var(--text); }
+
+/* --- PROFILE GRID --- */
+.grid, .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.grid-item { aspect-ratio: 1/1; background-size: cover; background-position: center; }
