@@ -1,167 +1,342 @@
-:root {
-    --primary: #0095f6;
-    --bg: #ffffff;
-    --light-bg: #fafafa;
-    --border: #dbdbdb;
-    --text: #262626;
-    --secondary: #8e8e8e;
-    --insta-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
+/* ALL-IN-ONE UPDATED CSS: EVERYTHING FIXED & MODERNIZED */
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    overflow-x: hidden;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f0f0f; /* Darker black for premium feel */
+    color: #ffffff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-.hidden { display: none !important; }
+/* Header & Navigation */
+header {
+    background: rgba(31, 31, 31, 0.95);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Modern blur effect */
+    border-bottom: 1px solid #333;
+}
 
-/* --- LOGIN --- */
-#login-page {
-    height: 100vh;
+nav {
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo { 
+    font-size: 2rem; 
+    font-weight: 800; 
+    color: #00ff88; 
+    letter-spacing: -1px;
+}
+.logo span { color: #fff; }
+
+ul { display: flex; list-style: none; }
+ul li a {
+    color: #bbb;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+ul li a:hover, .active { 
+    color: #00ff88; 
+}
+
+/* HERO SECTION - OVERLAP FIXED */
+.hero {
+    min-height: 90vh; 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    background: var(--insta-gradient);
-}
-
-.login-container {
-    background: white;
-    padding: 40px;
-    width: 350px;
+    align-items: center;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
 }
 
-.brand-logo {
-    font-size: 42px;
+.hero h1 {
+    font-size: 4rem; /* Big & Bold */
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 50px; /* Strong gap to avoid overlap */
+    max-width: 700px;
+}
+
+/* MODERN BUTTONS */
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Common Button Style */
+.btn {
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape - Very modern */
     font-weight: bold;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    background: #fafafa;
-}
-
-.btn-primary {
-    width: 100%;
-    background: var(--primary);
-    color: white;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
     border: none;
+    cursor: pointer;
+}
+
+/* Green Primary Button */
+.btn:not(.secondary) {
+    background: #00ff88;
+    color: #121212;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
+.btn:not(.secondary):hover {
+    background: #05e67c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5);
+}
+
+/* Ghost Secondary Button */
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background: #fff;
+    color: #121212;
+    transform: translateY(-3px);
+}
+
+/* Services Section */
+.services { padding: 100px 20px; text-align: center; background: #0f0f0f; }
+.services h2 { font-size: 2.5rem; margin-bottom: 50px; }
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #1f1f1f;
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    border: 1px solid #2a2a2a;
+}
+
+.card:hover { 
+    transform: translateY(-15px); 
+    border-color: #00ff88;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+}
+
+.card img { width: 80px; margin-bottom: 25px; filter: drop-shadow(0 0 5px #00ff88); }
+.card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+.card p { color: #aaa; font-size: 1rem; }
+
+/* Contact Form Section */
+.contact-section { padding: 100px 20px; text-align: center; background: #161616; }
+.contact-section h2 { font-size: 2.5rem; margin-bottom: 10px; }
+
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #1f1f1f;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+input, select {
+    padding: 15px;
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    border-color: #00ff88;
+}
+
+button[type="submit"] {
+    padding: 15px;
+    background: #00ff88;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #05e67c;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer { 
+    text-align: center; 
+    padding: 60px; 
+    color: #555; 
+    font-size: 0.9rem; 
+    border-top: 1px solid #222;
+}
+/* Search Box Style */
+.search-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput {
+    width: 60%;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 2px solid #333;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 1.1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+/* Entry Animation */
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.location-box {
+    background: #1f1f1f;
     padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid #00ff88;
+}
+
+.btn-small {
+    background: #00ff88;
+    border: none;
+    padding: 5px 10px;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+/* Modal (Popup) Design */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1f1f1f;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #00ff88;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
 
-/* --- MAIN INTERFACE --- */
-.main-header {
-    height: 60px;
-    background: white;
-    border-bottom: 1px solid var(--border);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.header-content {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 15px;
-}
-
-.logo { font-size: 24px; font-weight: bold; font-style: italic; }
-.header-icons i { font-size: 22px; margin-left: 20px; }
-
-.page-content {
-    display: none;
-    max-width: 600px;
-    margin: 60px auto 70px auto;
-}
-
-.active-page { display: block; }
-
-/* --- STORIES --- */
-.stories-bar {
-    display: flex;
-    overflow-x: auto;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.story-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 80px;
-    font-size: 11px;
-}
-
-.story-ring {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    padding: 3px;
-    background: #ccc;
-}
-
-.story-ring.active { background: var(--insta-gradient); }
-
-.story-ring img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 2px solid white;
-    object-fit: cover;
-}
-
-/* --- POSTS --- */
-.post-card {
-    background: white;
-    border: 1px solid var(--border);
-    margin-top: 15px;
-}
-
-.post-header { padding: 12px; display: flex; align-items: center; font-weight: 600; }
-.post-img { width: 100%; display: block; }
-.post-footer { padding: 12px; }
-.post-actions { font-size: 24px; margin-bottom: 10px; display: flex; gap: 15px; }
-
-/* --- NAV BAR --- */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-around;
+.pro-item {
+    border-bottom: 1px solid #333;
     padding: 15px 0;
 }
 
-.nav-icon { font-size: 24px; cursor: pointer; color: var(--secondary); }
-.nav-icon.active { color: var(--text); }
+.pro-item:last-child { border: none; }
 
-/* --- PROFILE GRID --- */
-.grid, .explore-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
+.pro-item p { margin: 5px 0; color: #ccc; }
+.pro-item strong { color: #fff; }
+/* Fly-in Animation for Thank You Message */
+.success-card {
+    background: #1f1f1f;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #00ff88;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 500px;
+    
+    /* Neenga ketta antha fly-in effect */
+    animation: slideUp 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
 }
 
-.grid-item { aspect-ratio: 1/1; background-size: cover; background-position: center; }
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tick-icon {
+    width: 70px;
+    height: 70px;
+    background: #00ff88;
+    color: #121212;
+    font-size: 35px;
+    line-height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}

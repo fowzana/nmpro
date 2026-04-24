@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickFix | Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Quick<span>Fix</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <div class="location-box" style="margin-bottom: 20px; padding: 15px; border: 1px solid #00ff88; border-radius: 10px; display: inline-block;">
+            <p>📍 Your Location: <span id="userCity" style="color: #00ff88; font-weight: bold;">Detecting...</span></p>
+        </div>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search for a service (e.g., AC, Wiring)..." onkeyup="searchService()">
+        </div>
+
+        <h2>Our Expert Services</h2>
+        <div class="service-container">
+            <div class="card" onclick="openModal('Electricians', [
+                {name: 'Ramesh', area: 'Adyar', phone: '+91 98765 43210', rating: '4.8'},
+                {name: 'Senthil', area: 'Guindy', phone: '+91 91234 56789', rating: '4.5'}
+            ])">
+                <img src="https://cdn-icons-png.flaticon.com/512/1904/1904425.png">
+                <h3>Electrician</h3>
+                <p>Click to see experts in your area.</p>
+            </div>
+
+            <div class="card" onclick="openModal('Mechanics', [
+                {name: 'Suresh', area: 'Velachery', phone: '+91 88776 55443', rating: '4.6'},
+                {name: 'Kumar', area: 'T.Nagar', phone: '+91 77665 11223', rating: '4.7'}
+            ])">
+                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933830.png">
+                <h3>Mechanic</h3>
+                <p>Click to see experts in your area.</p>
+            </div>
+
+            <div class="card" onclick="openModal('Cleaning Teams', [
+                {name: 'Deep Clean Pro', area: 'Anna Nagar', phone: '+91 77665 44332', rating: '4.9'},
+                {name: 'Eco Cleaners', area: 'Mylapore', phone: '+91 99887 77665', rating: '4.8'}
+            ])">
+                <img src="https://cdn-icons-png.flaticon.com/512/995/995053.png">
+                <h3>Cleaning</h3>
+                <p>Click to see experts in your area.</p>
+            </div>
+
+            <div class="card" onclick="openModal('Painters', [
+                {name: 'Arun Painters', area: 'Porur', phone: '+91 66554 33221', rating: '4.7'},
+                {name: 'Vibrant Colors', area: 'Tambaram', phone: '+91 88223 34455', rating: '4.6'}
+            ])">
+                <img src="https://cdn-icons-png.flaticon.com/512/2972/2972144.png">
+                <h3>Painting</h3>
+                <p>Click to see experts in your area.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color: #00ff88; margin-bottom: 20px;"></h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

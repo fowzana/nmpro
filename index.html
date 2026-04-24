@@ -3,100 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstaPro Elite</title>
+    <title>QuickFix | Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <div id="login-page" class="auth-wrapper">
-        <div class="glass-card">
-            <h1 class="brand-text">InstaPro</h1>
-            <p class="subtitle">Experience the next level</p>
-            <div class="input-group">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-            </div>
-            <button class="btn-glow" onclick="handleLogin()">Get Started</button>
-        </div>
-    </div>
-
-    <div id="app-shell" class="hidden">
-        
-        <header class="glass-header">
-            <span class="logo">InstaPro</span>
-            <div class="header-actions">
-                <i class="fa-regular fa-square-plus" onclick="togglePostModal()"></i>
-                <i class="fa-regular fa-comment-dots"></i>
-            </div>
-        </header>
-
-        <main class="content-scroll">
-            
-            <section id="page-home" class="app-page active">
-                <div class="stories-scroll">
-                    <div class="story-circle-wrapper">
-                        <div class="story-ring active"><img src="https://i.pravatar.cc/100?u=me"></div>
-                        <span>You</span>
-                    </div>
-                    <div class="story-circle-wrapper"><div class="story-ring"><img src="https://i.pravatar.cc/100?u=1"></div><span>alex</span></div>
-                    <div class="story-circle-wrapper"><div class="story-ring"><img src="https://i.pravatar.cc/100?u=2"></div><span>maya</span></div>
-                    <div class="story-circle-wrapper"><div class="story-ring"><img src="https://i.pravatar.cc/100?u=3"></div><span>leo</span></div>
-                </div>
-
-                <div id="feed-container"></div>
-            </section>
-
-            <section id="page-explore" class="app-page">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search elite creators...">
-                </div>
-                <div class="masonry-grid">
-                    <div class="grid-pic" style="background-image:url('https://picsum.photos/400/500?1')"></div>
-                    <div class="grid-pic" style="background-image:url('https://picsum.photos/400/300?2')"></div>
-                    <div class="grid-pic" style="background-image:url('https://picsum.photos/400/400?3')"></div>
-                </div>
-            </section>
-
-            <section id="page-profile" class="app-page">
-                <div class="profile-hero">
-                    <div class="profile-avatar-big">
-                        <img src="https://i.pravatar.cc/150?u=me" id="user-avatar">
-                    </div>
-                    <h2 id="display-name">Username</h2>
-                    <div class="stats-row">
-                        <div class="stat"><b>120</b><span>Posts</span></div>
-                        <div class="stat"><b>12k</b><span>Followers</span></div>
-                        <div class="stat"><b>350</b><span>Following</span></div>
-                    </div>
-                </div>
-                <div class="profile-grid" id="profile-grid"></div>
-            </section>
-        </main>
-
-        <nav class="bottom-tab-bar">
-            <div class="tab active" onclick="switchPage('page-home', this)"><i class="fa-solid fa-house"></i></div>
-            <div class="tab" onclick="switchPage('page-explore', this)"><i class="fa-solid fa-compass"></i></div>
-            <div class="tab" onclick="switchPage('page-profile', this)"><i class="fa-solid fa-circle-user"></i></div>
+    <header>
+        <nav>
+            <div class="logo">Quick<span>Fix</span></div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+    </header>
 
-        <div id="post-modal" class="modal hidden">
-            <div class="modal-content">
-                <h3>Create New Post</h3>
-                <textarea id="postText" placeholder="What's happening?"></textarea>
-                <div class="file-upload">
-                    <label for="postFile"><i class="fa-solid fa-cloud-arrow-up"></i> Choose Photo</label>
-                    <input type="file" id="postFile" accept="image/*" onchange="previewImg()">
-                </div>
-                <div class="modal-btns">
-                    <button class="btn-cancel" onclick="togglePostModal()">Cancel</button>
-                    <button class="btn-post" onclick="createPost()">Post Now</button>
-                </div>
-            </div>
+    <section class="hero">
+        <h1>Fast & Reliable Home Services</h1>
+        <p>Expert Electricians, Mechanics & more at your doorstep.</p>
+        <div class="hero-btns">
+            <a href="services.html" class="btn">Our Services</a>
+            <a href="contact.html" class="btn secondary">Book Now</a>
         </div>
-    </div>
+    </section>
 
-    <script src="app.js"></script>
+    <footer>
+        <p>&copy; 2024 QuickFix Home Services. Built for Naan Mudhalvan.</p>
+    </footer>
 </body>
 </html>

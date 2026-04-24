@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickFix | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Quick<span>Fix</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="office-info" style="max-width: 500px; margin: 0 auto 40px; background: #1f1f1f; padding: 20px; border-radius: 15px; border-left: 5px solid #00ff88; text-align: left;">
+            <h3 style="color: #00ff88; margin-bottom: 10px;">📍 Our Head Office</h3>
+            <p>123, Tech Park, Guindy Industrial Estate,</p>
+            <p>Chennai, Tamil Nadu - 600032</p>
+            <p style="margin-top: 10px;">📞 <strong>Helpline:</strong> 1800-123-4567</p>
+        </div>
+
+        <div id="formContainer">
+            <h2>Book Your Service</h2>
+            <p>Fill the form below and we will contact you shortly.</p>
+            <form id="serviceForm">
+                <input type="text" id="userName" placeholder="Your Full Name" required>
+                <input type="email" id="userEmail" placeholder="Your Email Address" required>
+                <select id="serviceSelected">
+                    <option value="Electrician">Electrician</option>
+                    <option value="Mechanic">Mechanic</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Painting">Painting</option>
+                </select>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+
+        <div id="thankYouMsg" class="success-card" style="display:none;">
+            <div class="tick-icon">✔</div>
+            <h3>Request Received, <span id="displayNm"></span>!</h3>
+            <p>Our expert team is on the way to your doorstep.</p>
+            <button onclick="location.reload()" class="btn-small" style="margin-top: 20px; background: #00ff88; border:none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer;">Book Another Service</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
