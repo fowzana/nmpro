@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #0f0f0f; /* Darker black for premium feel */
+    background-color: #0f0f0f; 
     color: #ffffff;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -21,7 +21,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Modern blur effect */
+    backdrop-filter: blur(10px); 
     border-bottom: 1px solid #333;
 }
 
@@ -54,7 +54,7 @@ ul li a:hover, .active {
     color: #00ff88; 
 }
 
-/* HERO SECTION - OVERLAP FIXED */
+/* HERO SECTION - NEW BACKGROUND UPDATED HERE */
 .hero {
     min-height: 90vh; 
     display: flex;
@@ -62,15 +62,16 @@ ul li a:hover, .active {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
-                url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1350&q=80');
+    /* Intha keela irukkura URL thaan professional home service image-ah mathuthu */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
+                url('https://images.unsplash.com/photo-1581578731522-a2046a45590b?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     padding: 40px 20px;
 }
 
 .hero h1 {
-    font-size: 4rem; /* Big & Bold */
+    font-size: 4rem; 
     margin-bottom: 20px;
     font-weight: 800;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
@@ -79,7 +80,7 @@ ul li a:hover, .active {
 .hero p {
     font-size: 1.4rem;
     color: #ccc;
-    margin-bottom: 50px; /* Strong gap to avoid overlap */
+    margin-bottom: 50px; 
     max-width: 700px;
 }
 
@@ -91,11 +92,10 @@ ul li a:hover, .active {
     justify-content: center;
 }
 
-/* Common Button Style */
 .btn {
     padding: 15px 35px;
     text-decoration: none;
-    border-radius: 50px; /* Pill shape - Very modern */
+    border-radius: 50px; 
     font-weight: bold;
     font-size: 1.1rem;
     transition: all 0.3s ease;
@@ -104,7 +104,6 @@ ul li a:hover, .active {
     cursor: pointer;
 }
 
-/* Green Primary Button */
 .btn:not(.secondary) {
     background: #00ff88;
     color: #121212;
@@ -117,7 +116,6 @@ ul li a:hover, .active {
     box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5);
 }
 
-/* Ghost Secondary Button */
 .btn.secondary {
     background: transparent;
     border: 2px solid #fff;
@@ -214,29 +212,6 @@ footer {
     font-size: 0.9rem; 
     border-top: 1px solid #222;
 }
-/* Search Box Style */
-.search-section {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-#searchInput {
-    width: 60%;
-    padding: 15px 25px;
-    border-radius: 50px;
-    border: 2px solid #333;
-    background: #1f1f1f;
-    color: #fff;
-    font-size: 1.1rem;
-    outline: none;
-    transition: 0.3s;
-}
-
-#searchInput:focus {
-    border-color: #00ff88;
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
-}
 
 /* Entry Animation */
 .card {
@@ -251,64 +226,8 @@ footer {
         transform: translateY(0);
     }
 }
-.location-box {
-    background: #1f1f1f;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    display: inline-block;
-    border: 1px solid #00ff88;
-}
 
-.btn-small {
-    background: #00ff88;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-/* Modal (Popup) Design */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 2000; 
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background-color: #1f1f1f;
-    margin: 10% auto;
-    padding: 30px;
-    border: 1px solid #00ff88;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 20px;
-    text-align: left;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.pro-item {
-    border-bottom: 1px solid #333;
-    padding: 15px 0;
-}
-
-.pro-item:last-child { border: none; }
-
-.pro-item p { margin: 5px 0; color: #ccc; }
-.pro-item strong { color: #fff; }
-/* Fly-in Animation for Thank You Message */
+/* Animations for Success Message */
 .success-card {
     background: #1f1f1f;
     padding: 40px;
@@ -317,8 +236,6 @@ footer {
     text-align: center;
     margin: 30px auto;
     max-width: 500px;
-    
-    /* Neenga ketta antha fly-in effect */
     animation: slideUp 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
     box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
 }
@@ -326,17 +243,4 @@ footer {
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(100px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.tick-icon {
-    width: 70px;
-    height: 70px;
-    background: #00ff88;
-    color: #121212;
-    font-size: 35px;
-    line-height: 70px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    font-weight: bold;
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
 }
